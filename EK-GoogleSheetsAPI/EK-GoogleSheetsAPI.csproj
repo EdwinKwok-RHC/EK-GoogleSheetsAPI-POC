@@ -8,6 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="client_secrets.json" />
+  </ItemGroup>
+
+  <!--<ItemGroup>
+    <Content Remove="GoogleSheetsHelper\client_secrets.json" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <None Include="client_secrets.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="GoogleSheetsHelper\client_secrets.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.Sheets.v4" Version="1.57.0.2826" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
